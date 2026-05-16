@@ -266,6 +266,15 @@ button:focus-visible {
   padding: clamp(3.5rem, 8vw, 5.5rem) 0;
 }
 
+.section-muted {
+  background: rgba(20, 26, 36, 0.55);
+  border-block: 1px solid var(--border);
+}
+
+.section-muted .section-header {
+  max-width: 42rem;
+}
+
 .section-header {
   text-align: center;
   max-width: 32rem;
@@ -397,6 +406,14 @@ button:focus-visible {
 .pricing-price .period {
   font-size: 0.9375rem;
   color: var(--text-muted);
+}
+
+.pricing-billing-note {
+  margin: -0.5rem 0 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .pricing-features {

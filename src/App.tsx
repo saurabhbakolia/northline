@@ -1,39 +1,39 @@
 const FEATURES = [
   {
     icon: "◎",
-    title: "Homepage signal, not noise",
+    title: "Workspace playbooks per rival",
     description:
-      "Semantic extraction surfaces pricing, positioning, and launch copy — without drowning you in nav chrome and cookie banners.",
+      "Group competitors into portfolios, attach owner notes, and route homepage drift to the right GTM pod—so launches and pricing shifts never land in a void.",
   },
   {
     icon: "△",
-    title: "Priority-scored changes",
+    title: "Playbooks over raw screenshots",
     description:
-      "Every diff is classified so founders see enterprise moves and AI launches before footer link shuffles.",
+      "Structured timelines highlight hero, pricing, and integrations deltas without storing brittle screenshots—rebuilt for teams running weekly competitive reviews.",
   },
   {
     icon: "◇",
-    title: "Built for GTM velocity",
+    title: "Revenue ops–aware alerting",
     description:
-      "Weekly digests and Slack alerts keep sales and product aligned before demos, launches, and board updates.",
+      "Escalate when rivals tease enterprise proof, new packaging, or pricing experiments—bi-directional Slack threads keep sales and PMs in lockstep before renewals.",
   },
   {
     icon: "◈",
-    title: "Founder-friendly setup",
+    title: "Guided onboarding rails",
     description:
-      "Paste a competitor URL, pick a cadence, and get your first snapshot in minutes — no integrations required.",
+      "Northline walks you from first URL to baseline snapshot in one sitting—pick crawl cadence, seat roles, and digest recipients without wiring integrations on day one.",
   },
   {
     icon: "◉",
-    title: "Versioned snapshots",
+    title: "Immutable baseline history",
     description:
-      "Hash-based comparison and line diffs show exactly what changed between crawls, with full history in one place.",
+      "Every crawl stores hashed homepage sections with line-accurate diffs—roll back months to show legal, finance, or the board exactly how a narrative evolved.",
   },
   {
     icon: "◐",
-    title: "Enterprise-ready later",
+    title: "Enterprise trust when you scale",
     description:
-      "SSO, audit logs, and VPC deployment when your team outgrows spreadsheets and manual checks.",
+      "When you graduate from spreadsheets, unlock SAML SSO, SCIM seats, SOC 2 readouts, and dedicated VPC crawlers for the firms watching dozens of rivals.",
   },
 ] as const;
 
@@ -50,42 +50,45 @@ const PLANS = [
       "1 tracked competitor",
       "Weekly homepage snapshots",
       "Email digest summaries",
-      "30-day change history",
+      "45-day rolling history (extended pilot)",
       "Community support",
     ],
   },
   {
-    id: "starter",
-    name: "Starter",
-    tagline: "For early-stage teams tracking a small competitive set",
-    price: "$39",
+    id: "growth",
+    name: "Growth",
+    tagline: "Seat-based packaging for small pods chasing a focused rival set",
+    price: "$49",
     period: "per seat / month",
-    cta: "Start Starter",
+    billingNote: "Annual prepay: $470 / seat / year (save ~20%)",
+    cta: "Start Growth",
     variant: "outline" as const,
     features: [
-      "Up to 3 tracked competitors",
+      "Up to 5 tracked competitors",
+      "3 seats included (expandable to 8)",
       "Bi-weekly homepage snapshots",
-      "Email change alerts",
-      "90-day change history",
-      "Priority-scored diffs",
+      "Email + in-app change alerts",
+      "120-day immutable history",
+      "Workspace folders & rival tags",
     ],
   },
   {
     id: "pro",
     name: "Pro",
-    tagline: "For teams shipping weekly and watching rivals closely",
-    price: "$99",
+    tagline: "Daily intelligence for GTM teams running parallel launches",
+    price: "$119",
     period: "per seat / month",
+    billingNote: "Annual prepay: $1,140 / seat / year (2 months free)",
     cta: "Start 14-day trial",
     variant: "primary" as const,
     popular: true,
     features: [
-      "Up to 10 tracked competitors",
-      "Daily homepage crawls",
-      "Semantic diffs & priority scoring",
-      "Slack & email alerts",
-      "Unlimited change history",
-      "Export snapshots (CSV)",
+      "Up to 25 tracked competitors",
+      "10 seats included with SCIM-ready roles",
+      "Daily homepage crawls + semantic reruns",
+      "Northline Sense™ AI summaries on every meaningful diff",
+      "Slack, Teams, and email escalation paths",
+      "Unlimited change history + CSV export",
     ],
   },
   {
@@ -93,16 +96,16 @@ const PLANS = [
     name: "Enterprise",
     tagline: "For regulated teams and portfolio operators",
     price: "Custom",
-    period: "annual contract",
+    period: "annual contract (minimum 25 seats)",
     cta: "Talk to sales",
     variant: "outline" as const,
     features: [
       "Unlimited tracked competitors",
-      "Hourly crawls & API access",
-      "SSO (SAML) & SCIM provisioning",
-      "SOC 2 Type II & audit logs",
-      "Dedicated success manager",
-      "VPC / private deployment option",
+      "Hourly crawls, webhooks, and GraphQL API",
+      "SSO (SAML) & SCIM seat governance",
+      "SOC 2 Type II, audit exports, DPAs",
+      "VPC / dedicated crawl workers",
+      "Named solutions engineer",
     ],
   },
 ] as const;
@@ -118,6 +121,7 @@ export default function App() {
           </a>
           <nav className="nav-primary" aria-label="Main">
             <a href="#features">Features</a>
+            <a href="#ai">AI</a>
             <a href="#pricing">Pricing</a>
             <a href="#enterprise">Enterprise</a>
           </nav>
@@ -135,13 +139,14 @@ export default function App() {
       <main>
         <section className="hero" aria-labelledby="hero-heading">
           <div className="container">
-            <p className="hero-badge">Now monitoring 2,400+ competitor homepages</p>
+            <p className="hero-badge">Now monitoring 2,600+ competitor homepages</p>
             <h1 id="hero-heading">
-              Know what rivals <em>ship</em> before your next launch
+              Northline Sense™ ranks rival homepage drift with <em>semantic AI</em>
             </h1>
             <p className="hero-lead">
-              Northline helps founders monitor competitor homepages, pricing moves, and GTM shifts —
-              with clean signal and zero alert fatigue.
+              Pair structured crawls with GPT-scored explanations so your team sees packaging
+              experiments, AI narrative pivots, and roadmap teasers before the next board readout—not
+              another noisy screenshot inbox.
             </p>
             <div className="hero-cta">
               <a href="#pricing" className="btn btn-primary">
@@ -168,13 +173,27 @@ export default function App() {
           </div>
         </section>
 
+        <section id="ai" className="section section-muted" aria-labelledby="ai-intel-heading">
+          <div className="container">
+            <header className="section-header">
+              <h2 id="ai-intel-heading">AI-native competitor intelligence</h2>
+              <p>
+                Northline Sense™ reads each semantic diff bundle, scores whether the move is
+                packaging, product, or narrative, and pushes a one-line founder brief to Slack. Large
+                language models highlight AI keywords—copilots, agents, LLM workflows—so your squad
+                spots synthetic positioning before the press release drops.
+              </p>
+            </header>
+          </div>
+        </section>
+
         <section id="features" className="section" aria-labelledby="features-heading">
           <div className="container">
             <header className="section-header">
-              <h2 id="features-heading">Features built for founders</h2>
+              <h2 id="features-heading">Product signals your GTM pod can act on</h2>
               <p>
-                Strategic homepage intelligence without the scraper scripts, screenshot folders, or
-                weekly manual checks.
+                From hero swaps to pricing grids, Northline sections the page so product, revops,
+                and competitive intel share one operational layer—not a shared drive of PNGs.
               </p>
             </header>
             <div className="features-grid">
@@ -194,10 +213,11 @@ export default function App() {
         <section id="pricing" className="section" aria-labelledby="pricing-heading">
           <div className="container">
             <header className="section-header">
-              <h2 id="pricing-heading">Simple, transparent pricing</h2>
+              <h2 id="pricing-heading">Packaging tuned for seat-based competitive programs</h2>
               <p>
-                Starter plans for solo founders. Pro for growing teams. Enterprise when you need
-                SSO, compliance, and unlimited scale.
+                Growth replaces our retired Starter bundle with higher limits, prepaid annual paths,
+                and AI summary credits bundled into Pro—lock in crawl depth before your next territory
+                rollout.
               </p>
             </header>
             <div className="pricing-grid">
@@ -216,6 +236,9 @@ export default function App() {
                     <span className="amount">{plan.price}</span>{" "}
                     <span className="period">{plan.period}</span>
                   </div>
+                  {"billingNote" in plan && plan.billingNote ? (
+                    <p className="pricing-billing-note">{plan.billingNote}</p>
+                  ) : null}
                   <ul className="pricing-features">
                     {plan.features.map((item) => (
                       <li key={item}>{item}</li>
