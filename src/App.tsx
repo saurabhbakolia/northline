@@ -40,11 +40,11 @@ const FEATURES = [
 const PLANS = [
   {
     id: "free",
-    name: "Free",
+    name: "Starter",
     tagline: "For solo founders testing section-level monitoring",
     price: "$0",
     period: "forever",
-    cta: "Start free",
+    cta: "Start Starter",
     variant: "outline" as const,
     features: [
       "1 tracked competitor",
@@ -56,12 +56,12 @@ const PLANS = [
   },
   {
     id: "growth",
-    name: "Growth",
+    name: "Launch",
     tagline: "Seat-based packaging for pods tracking a focused rival set",
-    price: "$59",
+    price: "$74",
     period: "per seat / month",
-    billingNote: "Annual prepay: $590 / seat / year (save ~17%)",
-    cta: "Start Growth",
+    billingNote: "Annual prepay: $740 / seat / year (save ~17%)",
+    cta: "Start Launch",
     variant: "outline" as const,
     features: [
       "Up to 8 tracked competitors",
@@ -74,12 +74,12 @@ const PLANS = [
   },
   {
     id: "team",
-    name: "Team",
+    name: "Velocity",
     tagline: "Cross-functional squads monitoring multiple homepage blocks",
-    price: "$89",
+    price: "$118",
     period: "per seat / month",
-    billingNote: "Annual prepay: $890 / seat / year (save ~17%)",
-    cta: "Start Team trial",
+    billingNote: "Annual prepay: $1,180 / seat / year (save ~17%)",
+    cta: "Start Velocity trial",
     variant: "outline" as const,
     features: [
       "Up to 15 tracked competitors",
@@ -92,11 +92,11 @@ const PLANS = [
   },
   {
     id: "pro",
-    name: "Pro",
+    name: "Command",
     tagline: "Daily intelligence for GTM teams shipping in parallel",
-    price: "$139",
+    price: "$168",
     period: "per seat / month",
-    billingNote: "Annual prepay: $1,390 / seat / year (2 months free)",
+    billingNote: "Annual prepay: $1,680 / seat / year (2 months free)",
     cta: "Start 14-day trial",
     variant: "primary" as const,
     popular: true,
@@ -111,10 +111,10 @@ const PLANS = [
   },
   {
     id: "enterprise",
-    name: "Enterprise",
+    name: "Platform",
     tagline: "For regulated teams and multi-region portfolio operators",
-    price: "Custom",
-    period: "annual contract (minimum 20 seats)",
+    price: "From $4,200",
+    period: "per month (annual contract, 20+ seats)",
     cta: "Talk to sales",
     variant: "outline" as const,
     features: [
@@ -233,7 +233,7 @@ export default function App() {
             <header className="section-header">
               <h2 id="pricing-heading">Plans built for section-by-section competitive programs</h2>
               <p>
-                New Team tier sits between Growth and Pro—more rivals, weekly section crawls, and Slack
+                Velocity sits between Launch and Command—more rivals, weekly section crawls, and Slack
                 digests. Annual prepay discounts apply across paid seats; lock pricing before your next
                 territory launch.
               </p>
