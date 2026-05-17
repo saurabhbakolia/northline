@@ -58,9 +58,9 @@ const PLANS = [
     id: "growth",
     name: "Launch",
     tagline: "Seat-based packaging for pods tracking a focused rival set",
-    price: "$74",
+    price: "$84",
     period: "per seat / month",
-    billingNote: "Annual prepay: $740 / seat / year (save ~17%)",
+    billingNote: "Annual prepay: $840 / seat / year (save ~17%)",
     cta: "Start Launch",
     variant: "outline" as const,
     features: [
@@ -76,9 +76,9 @@ const PLANS = [
     id: "team",
     name: "Velocity",
     tagline: "Cross-functional squads monitoring multiple homepage blocks",
-    price: "$118",
+    price: "$129",
     period: "per seat / month",
-    billingNote: "Annual prepay: $1,180 / seat / year (save ~17%)",
+    billingNote: "Annual prepay: $1,290 / seat / year (save ~17%)",
     cta: "Start Velocity trial",
     variant: "outline" as const,
     features: [
@@ -94,9 +94,9 @@ const PLANS = [
     id: "pro",
     name: "Command",
     tagline: "Daily intelligence for GTM teams shipping in parallel",
-    price: "$168",
+    price: "$189",
     period: "per seat / month",
-    billingNote: "Annual prepay: $1,680 / seat / year (2 months free)",
+    billingNote: "Annual prepay: $1,890 / seat / year (2 months free)",
     cta: "Start 14-day trial",
     variant: "primary" as const,
     popular: true,
@@ -113,7 +113,7 @@ const PLANS = [
     id: "enterprise",
     name: "Platform",
     tagline: "For regulated teams and multi-region portfolio operators",
-    price: "From $4,200",
+    price: "From $4,800",
     period: "per month (annual contract, 20+ seats)",
     cta: "Talk to sales",
     variant: "outline" as const,
@@ -139,16 +139,16 @@ export default function App() {
           </a>
           <nav className="nav-primary" aria-label="Main">
             <a href="#features">Features</a>
-            <a href="#ai">AI</a>
+            <a href="#ai">Sense AI</a>
             <a href="#pricing">Pricing</a>
             <a href="#enterprise">Enterprise</a>
           </nav>
           <div className="header-actions">
             <a href="#pricing" className="btn btn-ghost">
-              Log in
+              Sign in
             </a>
             <a href="#pricing" className="btn btn-primary">
-              Get started
+              Start free trial
             </a>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} Northline Inc. Section-aware competitor intelligence.
+            © {new Date().getFullYear()} Northline Labs. Trusted rival monitoring for GTM teams.
           </p>
           <nav className="footer-links" aria-label="Legal">
             <a href="#">Privacy</a>
